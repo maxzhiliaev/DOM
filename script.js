@@ -1,6 +1,8 @@
 const btn = document.getElementById('btn')
- const textBtn = btn.textContent = 'dont click me'
-console.log(textBtn)
+const input = document.getElementById('input')
+btn.addEventListener('click', () => {
+  btn.textContent = input.value || 'dont click me';
+});
 const img = document.getElementById('img')
 const newSrc = img.src = 'img//img2.jpeg'
 console.log(newSrc)
@@ -10,7 +12,6 @@ console.log(linkHref)
 const linkImg = document.getElementById('link__img')
 const altText = linkImg.alt = 'this is an image'
 console.log(altText)
-const list = document.getElementById('list')
-const listItem0 = document.getElementById('list__item')
-const newText0 = listItem0.textContent = 'item zero'
-console.log(newText0)
+const list = document.getElementById('list');
+const firstItem = list.firstElementChild;
+firstItem.textContent = 'item zero';
